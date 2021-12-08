@@ -126,12 +126,17 @@ export default {
           border-bottom: none;
         }
       }
-      
+
       // hover efect start
       tbody {
-        tr:hover {
-          background-color: rgb(117, 179, 230);
-          color: var(--white);
+        tr {
+          transition: background-color 0.15s linear;
+          transition: transform 0.25s linear;
+          &:hover {
+            background-color: rgb(117, 179, 230);
+            color: var(--white);
+            transform: translateY(5px);
+          }
         }
       }
       // hover efect end
